@@ -38,7 +38,7 @@ public class MediaService {
 	
 	protected ExecutorService es;
 	
-	protected Map<String, Object> lock = new HashMap<>();
+	protected Map<String, Object> lock = new HashMap();
 	
 	public void init() {
 		es = Executors.newFixedThreadPool(8);

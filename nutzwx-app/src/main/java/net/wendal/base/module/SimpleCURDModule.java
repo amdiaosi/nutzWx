@@ -44,7 +44,7 @@ public class SimpleCURDModule {
 	protected Map<String, SimpleCurdConfig> klassMap;
 	
 	public void init() {
-		klassMap = new HashMap<>();
+		klassMap = new HashMap();
 		for(Class<?> klass: Scans.me().scanPackage(User.class.getPackage().getName())){
 			SimpleCURD curd = klass.getAnnotation(SimpleCURD.class);
 			if (curd != null) {
